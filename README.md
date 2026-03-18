@@ -1,6 +1,6 @@
 # data-preprocessing-pipelines
 
-# 📄 ZIP → JSONL for RAG
+# ZIP → JSONL for RAG
 ### House Majority Staff Office — New Employee Knowledge Base
 
 Uses **Docling** to convert a ZIP of PDFs, PPTX, and DOCX files into a `.jsonl` file.
@@ -28,15 +28,15 @@ Uses **Docling** to convert a ZIP of PDFs, PPTX, and DOCX files into a `.jsonl` 
 ```
 
 Why this is good for our RAG model:
-- ✅ Each chunk fits cleanly within our embedding model's token window
-- ✅ Headings give the chatbot context about *where* in the document the answer came from
-- ✅ Page numbers allow citing sources
-- ✅ Tables are preserved as readable Markdown, not garbled text
+- Each chunk fits cleanly within our embedding model's token window
+- Headings give the chatbot context about *where* in the document the answer came from
+- Page numbers allow citing sources
+- Tables are preserved as readable Markdown, not garbled text
 
 ---
 **Run cells in order:**
-1. 📦 Install
-2. ⚙️ Configuration
-3. 🔧 Imports
-4. 🚀 Run
-5. 🔍 Preview *(optional)*
+1. Install
+2. Configuration
+3. Imports
+4. Run
+5. Preview *(optional)*
