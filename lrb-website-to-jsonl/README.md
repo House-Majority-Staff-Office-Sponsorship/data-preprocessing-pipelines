@@ -42,7 +42,6 @@ You run Part 1 first, then Part 2. The handoff between them is `pdfs.zip` — Pa
 | `scraped_output/page_text.jsonl` | Part 1 | Visible text from each scraped web page |
 | `scraped_output/pdfs/` | Part 1 | Raw PDF files on disk |
 | `scraped_output/document_log.csv` | Part 1 | URL + hash log for deduplication between runs |
-| `scraper_audit.log` | Part 1 | Timestamped log of every request, download, and skip |
 | `rag_dataset2.jsonl` | Part 2 | Final output — one record per PDF page, AI-extracted text, ready for RAG |
 
 ---
@@ -219,7 +218,7 @@ If you're building a RAG system you'll likely want to combine both files so your
 ## Troubleshooting
 
 **Part 1 finishes but `pdfs.zip` is empty or missing**
-Check `scraper_audit.log` — the PDF downloads may have failed due to network errors. Try increasing `REQUEST_TIMEOUT` in the Config cell and re-running.
+Try increasing `REQUEST_TIMEOUT` in the Config cell and re-running.
 
 **Part 2 fails with an authentication error**
 Your LlamaCloud API key is missing or incorrect. Check your `.env` file or the hardcoded key in the Part 2 Config cell.
