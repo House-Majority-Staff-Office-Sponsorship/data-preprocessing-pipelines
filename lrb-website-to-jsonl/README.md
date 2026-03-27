@@ -138,7 +138,10 @@ LlamaCloud will process each PDF page-by-page using its agentic AI parser. This 
 ```python
 TARGET_URLS = [
     "https://lrb.hawaii.gov/par/mission-history/",
-    "https://lrb.hawaii.gov/your-new-page/",   # ← add here
+    "https://lrb.hawaii.gov/par/current-legislature/",
+    "https://lrb.hawaii.gov/par/hawaiis-legislature-and-government/hawaiis-legislative-branch/",
+    "https://lrb.hawaii.gov/par/hawaiis-legislature-and-government/overview-of-branches-of-government/",
+    "https://lrb.hawaii.gov/directory/",
 ]
 ```
 
