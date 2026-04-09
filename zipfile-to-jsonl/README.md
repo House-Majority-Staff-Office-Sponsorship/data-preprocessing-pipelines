@@ -171,29 +171,6 @@ Try opening the file manually to confirm it isn't password-protected or corrupte
 | Avg chars per record | 1,496 |
 | Output file size | ~1.6 MB |
 
----
 
-## Next Steps — Loading into a Vector Store
-
-```python
-from llama_index.core import Document, VectorStoreIndex
-import json
-
-docs = []
-with open("rag_dataset.jsonl") as f:
-    for line in f:
-        r = json.loads(line)
-        docs.append(Document(
-            doc_id   = r["id"],
-            text     = r["text"],
-            metadata = {
-                "title":  r["title"],
-                "source": r["source_file"],
-                "page":   r["page_or_slide"],
-                **r["metadata"],
-            },
-        ))
-
-index = VectorStoreIndex.from_documents(docs)
 ```
 
