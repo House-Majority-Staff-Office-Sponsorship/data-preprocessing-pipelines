@@ -494,30 +494,6 @@ else:
 # | `text` | string | Markdown text; images/diagrams described inline by the agentic parser |
 # | `metadata` | object | `parse_tier`, `parsed_at` UTC timestamp |
 # 
-# ## Next Steps — Load into a Vector Store
-# 
-# ```python
-# from llama_index.core import Document, VectorStoreIndex
-# 
-# docs = []
-# with open("rag_dataset.jsonl") as f:
-#     for line in f:
-#         r = json.loads(line)
-#         docs.append(Document(
-#             doc_id   = r["id"],
-#             text     = r["text"],
-#             metadata = {
-#                 "title":  r["title"],
-#                 "source": r["source_file"],
-#                 "page":   r["page_or_slide"],
-#                 **r["metadata"],
-#             },
-#         ))
-# 
-# index = VectorStoreIndex.from_documents(docs)
-# ```
-
-# In[ ]:
 
 
 
